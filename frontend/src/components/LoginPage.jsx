@@ -16,7 +16,7 @@ const LoginPage = ({ showNotification }) => {
     setError('');
 
     try {
-      console.log('Attempting login with:', { email });
+      console.log('Attempting login with:', { email, password }, "https://time-bound-digital-access-vault-s4k.vercel.app/api/users/login");
 
       const response = await fetch('https://time-bound-digital-access-vault-s4k.vercel.app/api/users/login', {
         method: 'POST',
