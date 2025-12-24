@@ -269,6 +269,7 @@ const ShareLinkCard = ({ share, showNotification, onRevoke, onDelete }) => {
     setShowDropdown(false);
     setLoadingAction("regenerate");
     try {
+      console.log(`${API_BASE_URL}/api/share-links/shares/${share._id}/regenerate`);
       const res = await fetch(
         `${API_BASE_URL}/api/share-links/shares/${share._id}/regenerate`,
         {
