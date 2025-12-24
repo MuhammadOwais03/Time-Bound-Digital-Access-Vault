@@ -219,5 +219,23 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 ---
 
 
+<img width="1919" height="913" alt="image" src="https://github.com/user-attachments/assets/d8b0d619-3f47-498e-95f8-9a97290e453f" />
+<img width="1908" height="904" alt="image" src="https://github.com/user-attachments/assets/8bf4cae1-5a66-431e-9bd7-641af7b2b65e" />
+<img width="1899" height="903" alt="image" src="https://github.com/user-attachments/assets/5a7669b0-7bd8-4585-bef3-acb2624b371e" />
+<img width="1892" height="891" alt="image" src="https://github.com/user-attachments/assets/542667ef-530a-457b-8700-a0b172664e1e" />
+<img width="1889" height="900" alt="image" src="https://github.com/user-attachments/assets/98918bd6-e2fa-442e-9a1f-9aab1a6339f1" />
+<img width="1908" height="909" alt="image" src="https://github.com/user-attachments/assets/c44d29e3-7254-41a1-9449-6fef7d210e2d" />
+<img width="1919" height="906" alt="image" src="https://github.com/user-attachments/assets/43096858-9de9-4104-8ff9-b03add67465e" />
+<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/78ad0ae1-0d36-45cc-b22e-e2466dabb12d" />
+
+
+
+
+
+
+
+
+
+
 Made by Muhammad Owais- December 2025
 
