@@ -23,7 +23,9 @@ import userRouter from "./router/user.router.js"
 import vaultRouter from "./router/vault.router.js"
 import shareLinkRouter from "./router/shareLink.router.js"
 
-
+app.get("/", (req, res) => {
+    res.send("API is running...")
+})
 app.use("/api/users", userRouter)
 app.use("/api/vaults", vaultRouter)
 app.use("/api/share-links", shareLinkRouter)
