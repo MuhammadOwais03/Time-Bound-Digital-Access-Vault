@@ -126,8 +126,8 @@ export const logout = asyncHandler(async (req, res) => {
 
   const cookieOptions = {
     httpOnly: true,
-    secure: false, // true in production (HTTPS)
-    sameSite: "lax",
+    secure: true, // true in production (HTTPS)
+    sameSite: "none",
   };
 
   return res
