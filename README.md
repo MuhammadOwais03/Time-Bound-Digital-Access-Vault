@@ -58,7 +58,7 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 ### Authentication
 
 #### Register
-- **POST** `/auth/register`
+- **POST** `/users/register`
 - **Body**
   ```json
   {
@@ -70,7 +70,7 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 - **Success**: `201 Created` + sets httpOnly cookie
 
 #### Login
-- **POST** `/auth/login`
+- **POST** `/users/login`
 - **Body**
   ```json
   {
@@ -81,7 +81,7 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 - **Success**: `200 OK` + sets httpOnly cookie
 
 #### Logout
-- **POST** `/auth/logout`
+- **POST** `/users/logout`
 - **Success**: `200 OK` + clears cookie
 
 ### Vaults
@@ -123,7 +123,7 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 ### Share Links
 
 #### Create Share Link
-- **POST** `/share-links/vaults/:vaultId/share-link`
+- **POST** `/share-links/vaults/:vaultId/share`
 - **Body**
   ```json
   {
@@ -139,19 +139,19 @@ All protected routes require authentication via **httpOnly cookie** (sent automa
 - **Success**: Array of share link objects
 
 #### Lock Share Link
-- **PATCH** `/share-links/:id/lock`
+- **PATCH** `/share-links/shares/:id/lock`
 - **Success**: `200 OK`
 
 #### Unlock Share Link
-- **PATCH** `/share-links/:id/unlock`
+- **PATCH** `/share-links/shares/:id/unlock`
 - **Success**: `200 OK`
 
 #### Regenerate Token
-- **PATCH** `/share-links/:id/regenerate`
+- **PATCH** `/share-links/shares/:id/regenerate`
 - **Success**: Returns new token and URL (old link invalidated)
 
 #### Update Share Link Settings
-- **PATCH** `/share-links/:id/update`
+- **PATCH** `/share-links/shares/:id/update`
 - **Body** (any combination)
   ```json
   {
