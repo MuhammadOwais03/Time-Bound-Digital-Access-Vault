@@ -14,7 +14,7 @@ const CreateVault = ({ showNotification }) => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/vaults', {
+      const response = await fetch('https://time-bound-digital-access-vault-s4k.vercel.app/api/vaults', {
         method: 'POST',
         credentials: 'include', // Sends the httpOnly cookie automatically
         headers: {

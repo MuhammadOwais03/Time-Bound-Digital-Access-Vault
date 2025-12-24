@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Lock, Share2, CheckCircle, XCircle, Clock, Eye, AlertTriangle, TrendingUp } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://time-bound-digital-access-vault-s4k.vercel.app/api';
 
 const StatCard = ({ title, value, icon: Icon, color, subtitle, trend }) => (
   <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">

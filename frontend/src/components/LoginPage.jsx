@@ -18,7 +18,7 @@ const LoginPage = ({ showNotification }) => {
     try {
       console.log('Attempting login with:', { email });
 
-      const response = await fetch('http://localhost:3000/api/users/login', {
+      const response = await fetch('https://time-bound-digital-access-vault-s4k.vercel.app/api/users/login', {
         method: 'POST',
         credentials: 'include', // Critical: sends/receives cookies
         headers: {

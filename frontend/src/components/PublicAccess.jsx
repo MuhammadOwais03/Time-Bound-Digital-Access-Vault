@@ -4,7 +4,7 @@ import { Lock, Key, AlertCircle } from 'lucide-react';
 import { useRef } from 'react';
 
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://time-bound-digital-access-vault-s4k.vercel.app/api';
 
 const PublicAccess = () => {
   const { shareId } = useParams(); // From /share/:shareId

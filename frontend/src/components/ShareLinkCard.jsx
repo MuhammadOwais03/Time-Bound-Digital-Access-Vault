@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://time-bound-digital-access-vault-s4k.vercel.app";
 
 const EditShareModal = ({ share, onClose, onUpdated, showNotification }) => {
   const [expiresInDays, setExpiresInDays] = useState(share.expiresAt ? Math.ceil((new Date(share.expiresAt) - new Date()) / (1000 * 60 * 60 * 24)) + "d" : "never");

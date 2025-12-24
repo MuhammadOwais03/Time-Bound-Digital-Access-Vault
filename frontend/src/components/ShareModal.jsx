@@ -5,7 +5,7 @@ import {
   EyeOff,
 } from "lucide-react";
 
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "https://time-bound-digital-access-vault-s4k.vercel.app/api";
 
 const ShareModal = ({ vaultId, onClose, onCreated, showNotification }) => {
   const [expiresInDays, setExpiresInDays] = useState("24h");
