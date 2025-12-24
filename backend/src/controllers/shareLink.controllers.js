@@ -135,7 +135,7 @@ export const accessShareLink = async (req, res) => {
         .status(401)
         .json(new ApiResponse(401, null, "Invalid password"));
     }
-    // If password is correct → proceed, outcome remains "ALLOWED"
+    
   }
 
   link.remainingViews -= 1;
@@ -250,7 +250,7 @@ export const lockShareLink = async (req, res) => {
     shareLinkId: link._id,
     outcome: "DENIED",
     ipAddress: req.ip,
-    // You could add a note field if you want: note: "Manually locked by owner"
+    
   });
 
   return res
@@ -314,10 +314,10 @@ export const regenerateShareToken = async (req, res) => {
   }
 
   const oldToken = link.token;
-  const newToken = generateShareToken(); // Your existing token generator
+  const newToken = generateShareToken(); 
 
   link.token = newToken;
-  link.isLocked = false; // Optionally unlock on regenerate
+  link.isLocked = false; 
   await link.save();
 
   const newUrl = `${process.env.FRONTEND_URL}/share/${newToken}`;
@@ -365,7 +365,7 @@ export const updateShareLink = async (req, res) => {
     }
   }
 
-  // Update max views (reset remainingViews)
+  
   if (maxViews !== undefined) {
     const newMax = parseInt(maxViews);
     if (isNaN(newMax) || newMax < 1) {
@@ -373,7 +373,7 @@ export const updateShareLink = async (req, res) => {
     }
     link.maxViews = newMax;
     link.remainingViews = newMax;
-    link.isLocked = false; // Unlock if increasing views
+    link.isLocked = false; 
   }
 
   // Update password

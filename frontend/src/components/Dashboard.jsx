@@ -65,42 +65,7 @@ const Dashboard = ({ showNotification }) => {
     }
   };
 
-  // const fetchAnalytics = async () => {
-  //   try {
-  //     const [shareLinksRes, accessLogsRes] = await Promise.all([
-  //      fetch(`${API_BASE_URL}/share-links/vaults/:vaultId/share-link`, { credentials: 'include' }),
-  //       fetch(`${API_BASE_URL}share-links/vaults/:vaultId/logs`, { credentials: 'include' })
-  //     ]);
-
-  //     const shareLinks = shareLinksRes.ok ? await shareLinksRes.json() : { data: [] };
-  //     const accessLogs = accessLogsRes.ok ? await accessLogsRes.json() : { data: [] };
-
-  //     const shareLinkData = shareLinks.data || [];
-  //     const accessLogData = accessLogs.data || [];
-
-  //     const now = new Date();
-  //     const activeLinks = shareLinkData.filter(link =>
-  //       new Date(link.expiresAt) > now && !link.isLocked && link.remainingViews > 0
-  //     );
-  //     const expiredLinks = shareLinkData.filter(link =>
-  //       new Date(link.expiresAt) <= now
-  //     );
-
-  //     const allowedLogs = accessLogData.filter(log => log.outcome === 'ALLOWED');
-  //     const deniedLogs = accessLogData.filter(log => log.outcome === 'DENIED');
-
-  //     setAnalytics({
-  //       totalVaults: vaultItems.length,
-  //       totalShareLinks: shareLinkData.length,
-  //       activeShareLinks: activeLinks.length,
-  //       expiredShareLinks: expiredLinks.length,
-  //       allowedAccess: allowedLogs.length,
-  //       deniedAccess: deniedLogs.length,
-  //     });
-  //   } catch (error) {
-  //     console.error('Error fetching analytics:', error);
-  //   }
-  // };
+  
   const fetchAnalytics = async () => {
     if (vaultItems.length === 0) {
       setAnalytics({

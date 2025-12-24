@@ -27,7 +27,7 @@ const CreateVault = ({ showNotification }) => {
 
       if (response.ok) {
         showNotification('Vault item created successfully!', 'success');
-        navigate('/dashboard'); // Navigate back to dashboard
+        navigate('/dashboard'); 
       } else {
         setError(data.message || 'Failed to create vault item');
       }

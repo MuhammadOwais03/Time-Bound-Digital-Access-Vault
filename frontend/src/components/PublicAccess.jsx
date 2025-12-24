@@ -7,7 +7,7 @@ import { useRef } from 'react';
 const API_BASE_URL = 'https://time-bound-digital-access-vault-s4k.vercel.app/api';
 
 const PublicAccess = () => {
-  const { shareId } = useParams(); // From /share/:shareId
+  const { shareId } = useParams(); 
   const navigate = useNavigate();
 
   const [password, setPassword] = useState('');

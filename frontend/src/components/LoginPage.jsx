@@ -20,7 +20,7 @@ const LoginPage = ({ showNotification }) => {
 
       const response = await fetch('https://time-bound-digital-access-vault-s4k.vercel.app/api/users/login', {
         method: 'POST',
-        credentials: 'include', // Critical: sends/receives cookies
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -31,7 +31,7 @@ const LoginPage = ({ showNotification }) => {
       console.log('Login response:', data);
 
       if (response.ok) {
-        // No token needed — cookie is set automatically
+        
         showNotification('Login successful!', 'success');
         navigate('/dashboard'); // Direct navigation since we're using React Router
       } else {
