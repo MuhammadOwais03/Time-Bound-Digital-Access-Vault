@@ -182,7 +182,7 @@ const ShareLinkCard = ({ share, showNotification, onRevoke, onDelete }) => {
   const [isLocked, setIsLocked] = useState(share.isLocked);
   const [loadingAction, setLoadingAction] = useState(null);
   const [currentToken, setCurrentToken] = useState(share.token);
-  const [fullUrl, setFullUrl] = useState(`http://localhost:5173/share/`);
+  const [fullUrl, setFullUrl] = useState(`https://time-bound-digital-access-vault-nine.vercel.app/share/`);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
