@@ -412,7 +412,10 @@ const AuthLayout = ({ children }) => {
 
   const handleLogout = async () => {
     try {
-      await fetch(`${API_BASE_URL}/users/logout`, { method: 'POST', credentials: 'include' });
+      console.log(`${API_BASE_URL}/users/logout`);
+      const response = await fetch(`${API_BASE_URL}/users/logout`, { method: 'POST', credentials: 'include' });
+      const data = await response.json();
+      console.log('Logout response:', data);
     } catch (err) {
       console.error('Logout failed', err);
     } finally {
