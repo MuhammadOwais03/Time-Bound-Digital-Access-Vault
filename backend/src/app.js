@@ -14,11 +14,14 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://time-bound-digital-access-vault-s4k.vercel.app"
+      "https://time-bound-digital-access-vault-nine.vercel.app",
     ],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 app.use(express.json({limit: "16kb"}))
 app.use(express.urlencoded({
     extended: true,
